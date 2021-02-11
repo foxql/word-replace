@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev" : "nodemon index.js"
+    "dev": "nodemon develop/test.js",
+    "test" : "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/foxql/word-replace/issues"
   },
-  "homepage": "https://github.com/foxql/word-replace#readme"
+  "homepage": "https://github.com/foxql/word-replace#readme",
+  "dependencies": {
+    "mocha": "^8.3.0"
+  }
 }
