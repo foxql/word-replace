@@ -1,5 +1,3 @@
-'use-strict';
-
 class wordReplace{
 
     constructor({words, maxDepth, seperator = ' '})
