@@ -76,6 +76,9 @@ class wordReplace{
      */
     filter(wordSpace, orginalText)
     {
+        let filterResult = {
+            replaced : false
+        };
         for(let word in this.words) {
 
             const value = this.words[word];
@@ -85,12 +88,16 @@ class wordReplace{
                 
                 const pattern = new RegExp(targetString, 'gi');
                 orginalText = orginalText.replace(pattern, value);
+                filterResult.replaced = true;
 
             }
 
         }
 
-        return orginalText;
+        return {
+            orginalText : orginalText,
+            ...filterResult
+        };
     }
 
     /**
@@ -181,4 +188,4 @@ class wordReplace{
 }
 
 
-export default wordReplace;
+export default wordReplace
